@@ -42,10 +42,13 @@ class Student
   end
 
   #returns the student object it creates
-  def self.create(name:, grade:)
-    new_student = Student.new(name, grade)
-    new_student.save
-    new_student
+  def self.create(name, grade)
+    sql = <<-SQL
+      INSERT INTO students (name, grade) VALUES (?, ?)
+    SQL
+    # new_student = Student.new(name, grade)
+    # new_student.save
+    # new_student
   end
 
   #convert data from database into ruby object
