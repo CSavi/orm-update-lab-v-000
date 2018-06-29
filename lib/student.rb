@@ -41,10 +41,10 @@ class Student
     end
   end
 
-  #returns the student object it creates 
+  #returns the student object it creates
   def self.create(name:, grade:)
     new_student = Students.new(name, grade)
-    new_student.save 
+    new_student.save
     new_student
   end   
 
