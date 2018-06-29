@@ -41,9 +41,10 @@ class Student
     end
   end
 
+  #returns the student object it creates 
   def self.create
     sql = <<-SQL
-      
+
     SQL
 
   def update
