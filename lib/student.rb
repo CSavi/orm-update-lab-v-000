@@ -43,11 +43,7 @@ class Student
 
   #returns the student object it creates
   def self.create(name, grade)
-    # sql = <<-SQL
-    #   INSERT INTO students (name, grade) VALUES (?, ?)
-    # SQL
-    # DB[:conn].execute(sql, name, grade)
-    # @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
+    
     new_student = Student.new(name, grade)
     new_student.save
     new_student
