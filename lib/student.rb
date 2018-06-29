@@ -66,12 +66,11 @@ class Student
     SQL
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
-    end.first    
+    end.first
   end
 
   def update
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-
 end
