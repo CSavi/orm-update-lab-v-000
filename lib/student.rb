@@ -41,4 +41,9 @@ class Student
     end
   end
 
+  def update
+    sql = "UDPATE students SET name = ?, grade = ? WHERE id = ?"
+    
+  end
+
 end
