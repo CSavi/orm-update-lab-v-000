@@ -46,6 +46,7 @@ class Student
     sql = <<-SQL
       INSERT INTO students (name, grade) VALUES (?, ?)
     SQL
+    DB[:conn].execute(sql, self.name, self.grade)
     # new_student = Student.new(name, grade)
     # new_student.save
     # new_student
